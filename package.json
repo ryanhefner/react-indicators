@@ -1,0 +1,41 @@
+{
+  "name": "react-indicators",
+  "version": "0.1.0",
+  "description": "A library of indicators you can use in your React projects.",
+  "keywords": [
+    "react",
+    "react-component",
+    "indicator",
+    "indicators",
+    "progress",
+    "components",
+    "library",
+    "canvas"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "compile": "webpack --config webpack.config.js",
+    "prepublish": "npm run compile",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:ryanhefner/react-indicators.git",
+  "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^3.0.0"
+  }
+}
