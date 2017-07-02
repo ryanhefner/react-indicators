@@ -1,6 +1,6 @@
 {
   "name": "react-indicators",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
   "keywords": [
     "react",
