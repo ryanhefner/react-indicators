@@ -16,7 +16,7 @@ Using [npm](https://npmjs.com/package/react-indicators):
 npm install --save react-indicators
 ```
 
-Using [Yarn](https://yarnpkg.com/en/package/react-indicators):
+Using [Yarn](https://yarn.fyi/react-indicators):
 ```
 yarn add react-indicators
 ```
