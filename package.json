@@ -1,7 +1,7 @@
 {
   "name": "react-indicators",
-  "version": "0.1.0",
-  "description": "A library of indicators you can use in your React projects.",
+  "version": "0.1.1",
+  "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
   "keywords": [
     "react",
     "react-component",
@@ -12,12 +12,12 @@
     "library",
     "canvas"
   ],
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "files": [
-    "dist/"
+    "lib/"
   ],
   "scripts": {
-    "compile": "webpack --config webpack.config.js",
+    "compile": "babel -d lib/ src/",
     "prepublish": "npm run compile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -32,10 +32,8 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "webpack": "^3.0.0"
+    "babel-preset-react": "^6.24.1"
   }
 }

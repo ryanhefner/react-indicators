@@ -1,7 +1,7 @@
 /**
  * react-indicators
  *
- * @version 0.1.0
+ * @version 0.1.1
  * @author Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)
  * @license MIT
  */
