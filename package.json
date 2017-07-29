@@ -1,7 +1,63 @@
 {
   "name": "react-indicators",
-  "version": "0.1.2",
+  "version": "0.2.0",
+  "license": "MIT",
   "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
+  "repository": "ryanhefner/react-indicators",
+  "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+  "files": [
+    "es",
+    "umd",
+    "index.js",
+    "BarIndicator.js",
+    "Canvas.js",
+    "CircleIndicator.js"
+  ],
+  "directories": {
+    "lib": "/src"
+  },
+  "main": "index.js",
+  "module": "es/index.js",
+  "jsnext:main": "src/index.js",
+  "scripts": {
+    "clean": "rm -f index.js && rm -f BarIndicator.js && rm -f Canvas.js && rm -f CircleIndicator.js && rm -fr es && rm -fr umd",
+    "prebuild": "npm run clean",
+    "build": "node ./tools/build.js",
+    "watch": "babel ./src -d . --ignore __tests__ --watch",
+    "prepare": "npm run build",
+    "prepublishOnly": "node ./tools/build.js",
+    "push-release": "git push origin master && git push --tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "react": ">=15"
+  },
+  "dependencies": {
+    "clean-react-props": "^0.1.0",
+    "lodash.omit": "^4.5.0",
+    "prop-types": "^15.5.10",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-dev-expression": "^0.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.6",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "gzip-size": "^3.0.0",
+    "jest": "^20.0.4",
+    "pretty-bytes": "^4.0.2",
+    "react": "^15.6.1",
+    "rollup": "^0.45.2",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rollup-watch": "^4.3.1"
+  },
   "keywords": [
     "react",
     "react-component",
@@ -11,29 +67,5 @@
     "components",
     "library",
     "canvas"
-  ],
-  "main": "lib/index.js",
-  "files": [
-    "lib/"
-  ],
-  "scripts": {
-    "compile": "babel -d lib/ src/",
-    "prepublish": "npm run compile",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": "git@github.com:ryanhefner/react-indicators.git",
-  "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
-  "license": "MIT",
-  "dependencies": {
-    "lodash": "^4.17.4",
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1"
-  }
+  ]
 }

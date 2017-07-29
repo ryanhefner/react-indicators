@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import omit from 'lodash.omit';
 import Canvas from './Canvas';
 
 class CircleIndicator extends Component {
@@ -11,7 +11,7 @@ class CircleIndicator extends Component {
     this.draw = this.draw.bind(this);
   }
 
-  draw(progress, canvas) {
+  draw(canvas) {
     const node = ReactDOM.findDOMNode(canvas);
     const context = node.getContext('2d');
 
@@ -23,6 +23,7 @@ class CircleIndicator extends Component {
       size,
       fill,
       fillBackground,
+      progress,
       stroke,
       strokeBackground,
       strokeWidth,
@@ -72,10 +73,11 @@ class CircleIndicator extends Component {
       size,
     } = this.props;
 
-    const props = _.omit(this.props, [
+    const cleanProps = omit(this.props, [
       'size',
       'fill',
       'fillBackground',
+      'progress',
       'stroke',
       'strokeBackground',
       'strokeWidth',
@@ -83,7 +85,7 @@ class CircleIndicator extends Component {
 
     return (
       <Canvas
-        {...props}
+        {...cleanProps}
         draw={this.draw}
         height={size}
         width={size}

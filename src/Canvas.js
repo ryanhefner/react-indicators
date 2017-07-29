@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import cleanProps from 'clean-react-props';
 
 class Canvas extends Component {
   componentDidMount() {
@@ -20,12 +20,7 @@ class Canvas extends Component {
       return;
     }
 
-    const {
-      draw,
-      progress,
-    } = this.props;
-
-    draw(progress, this.canvas);
+    this.props.draw(this.canvas);
   }
 
   render() {
@@ -36,21 +31,13 @@ class Canvas extends Component {
     } = this.props;
 
     const pixelRatio = window.devicePixelRatio || 1;
-    const props = _.omit(this.props, [
-      'canvasRef',
-      'draw',
-      'progress',
-      'width',
-      'height',
-    ]);
-
     const ref = canvasRef
       ? canvasRef
       : (element) => { this.canvas = element; };
 
     return (
       <canvas
-        {...props}
+        {...cleanProps(this.props)}
         ref={ref}
         width={width * pixelRatio}
         height={height * pixelRatio}
@@ -64,14 +51,12 @@ Canvas.propTypes = {
   draw: PropTypes.func,
   width: PropTypes.number,
   height: PropTypes.number,
-  progress: PropTypes.number,
 };
 
 Canvas.defaultProps = {
   draw: () => {},
   width: 30,
   height: 30,
-  progress: 0,
 };
 
 export default Canvas;

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import omit from 'lodash.omit';
 import Canvas from './Canvas';
 
 class BarIndicator extends Component {
@@ -11,7 +11,7 @@ class BarIndicator extends Component {
     this.draw = this.draw.bind(this);
   }
 
-  draw(progress, canvas) {
+  draw(canvas) {
     const node = ReactDOM.findDOMNode(canvas);
     const context = node.getContext('2d');
 
@@ -20,10 +20,11 @@ class BarIndicator extends Component {
     }
 
     const {
-      width,
-      height,
-      color,
       backgroundColor,
+      color,
+      height,
+      progress,
+      width,
     } = this.props;
 
     const pixelRatio = window.devicePixelRatio || 1;
@@ -38,7 +39,7 @@ class BarIndicator extends Component {
   }
 
   render() {
-    const props = _.omit(this.props, [
+    const props = omit(this.props, [
       'color',
       'backgroundColor',
     ]);
