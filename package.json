@@ -1,6 +1,6 @@
 {
   "name": "react-indicators",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
   "repository": "ryanhefner/react-indicators",
