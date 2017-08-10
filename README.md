@@ -11,19 +11,21 @@ element via a `ref`, and go nuts with your own canvas design goodness!
 ## Install
 
 Using [npm](https://npmjs.com/package/react-indicators):
-```
+
+```sh
 npm install --save react-indicators
 ```
 
 Using [Yarn](https://yarn.fyi/react-indicators):
-```
+
+```sh
 yarn add react-indicators
 ```
 
 Once you’ve added `react-indicators` to your project, you can use it just like you
 would any other package you have installed.
 
-```
+```js
 // using ES6 modules
 import {CircleIndicator} from 'react-indicators';
 
@@ -52,7 +54,7 @@ support.
 
 **Example**
 
-```
+```js
 import {CircleIndicator} from 'react-indicators';
 
 ...
@@ -83,7 +85,7 @@ import {CircleIndicator} from 'react-indicators';
 
 **Example**
 
-```
+```js
 import {CircleIndicator} from 'react-indicators';
 
 ...
@@ -113,7 +115,7 @@ import {CircleIndicator} from 'react-indicators';
 
 **Example - Canvas `ref`**
 
-```
+```js
 import {Canvas} from 'react-indicators';
 
 ...
@@ -141,7 +143,7 @@ import {Canvas} from 'react-indicators';
 
 **Example - Custom `draw` method**
 
-```
+```js
 import {Canvas} from 'react-indicators';
 
 ...
