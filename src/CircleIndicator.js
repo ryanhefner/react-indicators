@@ -48,24 +48,26 @@ class CircleIndicator extends Component {
     context.stroke();
     context.fill();
 
-    context.fillStyle = fill;
-    context.strokeStyle = stroke;
-    context.beginPath();
-    context.arc(
-      (responsiveSize / 2),
-      (responsiveSize / 2),
-      (responsiveSize / 2) - ((strokeWidth * pixelRatio) / 2),
-      -(Math.PI / 2),
-      -(Math.PI / 2) + (Math.PI * (Math.max(0.001, (progress * 2)))),
-      false
-    );
+    if (progress) {
+      context.fillStyle = fill;
+      context.strokeStyle = stroke;
+      context.beginPath();
+      context.arc(
+        (responsiveSize / 2),
+        (responsiveSize / 2),
+        (responsiveSize / 2) - ((strokeWidth * pixelRatio) / 2),
+        -(Math.PI / 2),
+        -(Math.PI / 2) + (Math.PI * (Math.max(0.001, (progress * 2)))),
+        false
+      );
 
-    if (fill !== 'transparent') {
-      context.lineTo(responsiveSize / 2, responsiveSize / 2);
-      context.fill();
+      if (fill !== 'transparent') {
+        context.lineTo(responsiveSize / 2, responsiveSize / 2);
+        context.fill();
+      }
+
+      context.stroke();
     }
-
-    context.stroke();
   }
 
   render() {

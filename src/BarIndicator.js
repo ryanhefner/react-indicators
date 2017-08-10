@@ -34,8 +34,11 @@ class BarIndicator extends Component {
     context.clearRect(0, 0, responsiveWidth, responsiveHeight);
     context.fillStyle = backgroundColor;
     context.fillRect(0, 0, width, height);
-    context.fillStyle = color;
-    context.fillRect(0, 0, width * progress, height);
+
+    if (progress) {
+      context.fillStyle = color;
+      context.fillRect(0, 0, width * progress, height);
+    }
   }
 
   render() {
