@@ -4,9 +4,11 @@ Simple, [responsive](#responsive-canvas), canvas-based indicators that
 you can use to communicate the progress of loaders, timers or whatever else you
 might need a progress indicator for.
 
-In addition to the pre-built indicators, this library includes a generic `Canvas`
+~~In addition to the pre-built indicators, this library includes a generic `Canvas`
 component that you can pass a custom `draw` function to, or access the `<canvas>`
-element via a `ref`, and go nuts with your own canvas design goodness!
+element via a `ref`, and go nuts with your own canvas design goodness!~~
+
+**Update:** I’ve moved the `Canvas` component to its own repo/package because I was finding myself needing it for cases where I didn’t need the indicators. This package now relies on `react-canvas-wrapper` as a dependency. You can check it out here: [react-canvas-wrapper](https://github.com/ryanhefner/react-canvas-wrapper)
 
 ## Install
 
@@ -27,7 +29,7 @@ would any other package you have installed.
 
 ```js
 // using ES6 modules
-import {CircleIndicator} from 'react-indicators';
+import { CircleIndicator } from 'react-indicators';
 
 // using CommonJS modules
 var CircleIndicator = require('react-indicators').CircleIndicator;
@@ -35,10 +37,7 @@ var CircleIndicator = require('react-indicators').CircleIndicator;
 
 ## Indicators
 
-The library consists of two common indicator components, `BarIndicator` and `CircleIndicator`.
-And, a base component that both of these components utilize, `Canvas`. Below are
-examples of how you can use each component, along with the properties that they
-support.
+The library consists of two common indicator components, `BarIndicator` and `CircleIndicator`. Below are examples of how you can use each component, along with the properties that they support.
 
 ### `<CircleIndicator />`
 
@@ -55,7 +54,7 @@ support.
 **Example**
 
 ```js
-import {CircleIndicator} from 'react-indicators';
+import { CircleIndicator } from 'react-indicators';
 
 ...
 
@@ -86,7 +85,7 @@ import {CircleIndicator} from 'react-indicators';
 **Example**
 
 ```js
-import {CircleIndicator} from 'react-indicators';
+import { BarIndicator } from 'react-indicators';
 
 ...
 
@@ -96,110 +95,7 @@ import {CircleIndicator} from 'react-indicators';
     } = this.state;
 
     return (
-      <CircleIndicator progress={progress} />
-    );
-  }
-
-...
-
-```
-
-### `<Canvas />`
-
-**Properties**
-
-* `canvasRef:Function` - Function to set reference to `<canvas>` element. (Default: `(element) => { this.canvas = element; }`)
-* `draw:Function` - Callback called when props change on the component. (Default: `(canvas) => {}`)
-* `width:Number` - Width of the canvas @ 1x. (Default: `30`)
-* `height:Number` - Height of the canvas @ 1x. (Default: `30`)
-
-**Example - Canvas `ref`**
-
-```js
-import {Canvas} from 'react-indicators';
-
-...
-
-  componentWillReceiveProps(nextProps) {
-    this.refreshCanvas();
-  }
-
-  refreshCanvas() {
-    const canvas = ReactDOM.findDOMNode(this.canvas);
-    const context = canvas.getContext('2d');
-
-    /**
-     * ...Perform canvas magic here...
-     */
-  }
-
-  render() {
-    return (
-      <Canvas canvasRef={(element) => { this.canvas = element; }} />
-    );
-  }
-
-```
-
-**Example - Custom `draw` method**
-
-```js
-import {Canvas} from 'react-indicators';
-
-...
-  constructor(props) {
-    super(props);
-
-    this.draw = this.draw.bind(this);
-  }
-
-  draw(canvas) {
-    const node = ReactDOM.findDOMNode(canvas);
-    const context = node.getContext('2d');
-
-    if (!context) {
-      return;
-    }
-
-    const {
-      progress,
-    } = this.props;
-
-    const pixelRatio = window.devicePixelRatio || 1;
-    const width = 30 * pixelRatio;
-    const height = 30 * pixelRatio;
-    const backgroundColor = 'grey';
-    const color = 'black';
-
-    context.clearRect(0, 0, width, height);
-    context.fillStyle = backgroundColor;
-    context.beginPath();
-    context.arc(
-      (width / 2),
-      (height / 2),
-      (width / 2),
-      0,
-      Math.PI * 2
-    );
-    context.fill();
-
-    context.fillStyle = color;
-    context.beginPath();
-    context.arc(
-      (width / 2),
-      (height / 2),
-      ((width * progress) / 2),
-      0,
-      Math.PI * 2
-    );
-    context.fill();
-  }
-
-  render() {
-    return (
-      <Canvas
-        draw={this.draw}
-      />
+      <BarIndicator progress={progress} />
     );
   }
 
@@ -214,9 +110,6 @@ in, so the canvas is properly sized in order to keep the graphics crisp and clea
 So, feel free to set the size or dimensions based on a `1x` scale and the component
 will adjust those accordingly.
 
-Although, keep in mind that if you decide to pass in your own custom `draw` function
-you’ll have to account for the `devicePixelRatio` within your drawing commands.
-
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE) © [Ryan Hefner](https://www.ryanhefner.com)
