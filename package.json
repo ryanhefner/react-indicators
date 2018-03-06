@@ -7,7 +7,6 @@
   "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
   "files": [
     "BarIndicator.js",
-    "Canvas.js",
     "CircleIndicator.js",
     "es",
     "index.js",
@@ -21,7 +20,7 @@
   "module": "es/index.js",
   "jsnext:main": "src/index.js",
   "scripts": {
-    "clean": "rm -f index.js && rm -f BarIndicator.js && rm -f Canvas.js && rm -f CircleIndicator.js && rm -fr es && rm -fr umd",
+    "clean": "rm -f index.js && rm -f BarIndicator.js && rm -f CircleIndicator.js && rm -fr es && rm -fr umd",
     "prebuild": "npm run clean",
     "build": "node ./tools/build.js",
     "watch": "babel ./src -d . --ignore __tests__ --watch",
@@ -31,13 +30,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "react": ">=15"
+    "react": ">=15",
+    "react-dom": ">=15"
   },
   "dependencies": {
     "clean-react-props": "^0.1.1",
-    "lodash.omit": "^4.5.0",
+    "lomit": "^0.1.1",
+    "npm": "^5.7.1",
     "prop-types": "^15.5.10",
-    "react-dom": "^15.6.1"
+    "react-canvas-wrapper": "^0.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -50,7 +51,8 @@
     "gzip-size": "^3.0.0",
     "jest": "^20.0.4",
     "pretty-bytes": "^4.0.2",
-    "react": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "rollup": "^0.45.2",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
@@ -65,6 +67,7 @@
     "indicator",
     "indicators",
     "progress",
+    "timer",
     "components",
     "library",
     "canvas"

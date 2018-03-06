@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import omit from 'lodash.omit';
-import Canvas from './Canvas';
+import omit from 'lomit';
+import Canvas from 'react-canvas-wrapper';
 
 class CircleIndicator extends Component {
   constructor(props) {
