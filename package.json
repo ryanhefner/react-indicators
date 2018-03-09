@@ -38,7 +38,7 @@
     "lomit": "^0.1.1",
     "npm": "^5.7.1",
     "prop-types": "^15.5.10",
-    "react-canvas-wrapper": "^0.1.1"
+    "react-canvas-wrapper": "^0.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
