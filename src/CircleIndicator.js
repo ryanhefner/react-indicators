@@ -75,7 +75,7 @@ class CircleIndicator extends Component {
       size,
     } = this.props;
 
-    const cleanProps = omit(this.props, [
+    const props = omit(this.props, [
       'size',
       'fill',
       'fillBackground',
@@ -87,7 +87,7 @@ class CircleIndicator extends Component {
 
     return (
       <Canvas
-        {...cleanProps}
+        {...props}
         draw={this.draw}
         height={size}
         width={size}
