@@ -5,6 +5,17 @@
   "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
   "repository": "ryanhefner/react-indicators",
   "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+  "keywords": [
+    "react",
+    "react-component",
+    "indicator",
+    "indicators",
+    "progress",
+    "timer",
+    "components",
+    "library",
+    "canvas"
+  ],
   "files": [
     "BarIndicator.js",
     "CircleIndicator.js",
@@ -51,7 +62,7 @@
     "coveralls": "^3.0.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "greenkeeper-lockfile": "^1.14.0",
+    "greenkeeper-lockfile": "^1.15.1",
     "gzip-size": "^4.1.0",
     "jest": "^22.4.3",
     "jest-enzyme": "^6.0.0",
@@ -74,16 +85,5 @@
       "src/**/*.js",
       "!src/**/*.test.js"
     ]
-  },
-  "keywords": [
-    "react",
-    "react-component",
-    "indicator",
-    "indicators",
-    "progress",
-    "timer",
-    "components",
-    "library",
-    "canvas"
-  ]
+  }
 }
