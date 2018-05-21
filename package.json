@@ -47,7 +47,7 @@
   "dependencies": {
     "lomit": "^0.1.1",
     "prop-types": "^15.5.10",
-    "react-canvas-wrapper": "^0.2.4"
+    "react-canvas-wrapper": "^0.2.5"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
