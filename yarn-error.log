@@ -1,0 +1,126 @@
+Arguments: 
+  /usr/local/Cellar/node/12.1.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js
+
+PATH: 
+  /Users/ryanhefner/google-cloud-sdk/bin:/usr/local/opt/icu4c/sbin:/usr/local/opt/icu4c/bin:/Users/ryanhefner/.pyenv/shims:~/.erlangInstaller/default/bin:/Users/ryanhefner/.pyenv/shims:/Users/ryanhefner/.rbenv/shims:/usr/local/bin:/Users/ryanhefner/.nvm/versions/node/v10.15.3/bin:/usr/local/sbin:/usr/bin:/bin:/usr/local/bin:/usr/sbin:/sbin:~/.composer/vendor/bin:~/.rbenv/shims/ruby:/usr/local/bin/elixir:/usr/local/share/dotnet:/usr/local/opt/android-sdk/tools:/usr/local/opt/android-sdk/platform-tools:/Users/ryanhefner/webdrivers
+
+Yarn version: 
+  1.16.0
+
+Node version: 
+  12.1.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ryanhefner/Dropbox/Code/open-source/react-indicators/package.json: Unexpected token < in JSON at position 2129
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:304:30)
+      at /usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "react-indicators",
+    "version": "0.3.7",
+    "license": "MIT",
+    "description": "Simple, responsive, canvas-based indicators that you can use to communicate the progress of loaders, timers or whatever else you might need a progress indicator for.",
+    "repository": "ryanhefner/react-indicators",
+    "author": "Ryan Hefner <hi@ryanhefner.com> (https://www.ryanhefner.com)",
+    "keywords": [
+      "react",
+      "react-component",
+      "indicator",
+      "indicators",
+      "progress",
+      "timer",
+      "components",
+      "library",
+      "canvas"
+    ],
+    "files": [
+      "BarIndicator.js",
+      "CircleIndicator.js",
+      "es",
+      "index.js",
+      "src",
+      "umd"
+    ],
+    "directories": {
+      "lib": "/src"
+    },
+    "main": "index.js",
+    "module": "es/index.js",
+    "jsnext:main": "src/index.js",
+    "scripts": {
+      "clean": "rm -f index.js && rm -f BarIndicator.js && rm -f CircleIndicator.js && rm -fr es && rm -fr umd",
+      "prebuild": "npm run clean",
+      "build": "node ./tools/build.js",
+      "watch": "babel ./src -d . --ignore __tests__ --watch",
+      "prepare": "npm run build",
+      "prepublishOnly": "node ./tools/build.js",
+      "push-release": "git push origin master && git push --tags",
+      "test": "jest"
+    },
+    "peerDependencies": {
+      "react": ">=15",
+      "react-dom": ">=15"
+    },
+    "dependencies": {
+      "lomit": "^0.1.1",
+      "prop-types": "^15.6.2",
+      "react-canvas-wrapper": "^0.2.6"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.24.1",
+      "babel-core": "^6.26.0",
+      "babel-jest": "^23.4.2",
+      "babel-plugin-dev-expression": "^0.2.1",
+      "babel-plugin-external-helpers": "^6.22.0",
+      "babel-plugin-transform-object-rest-spread": "^6.23.0",
+      "babel-plugin-transform-react-remove-prop-types": "^0.4.14",
+      "babel-preset-env": "^1.6.1",
+      "babel-preset-react": "^6.24.1",
+      "coveralls": "^3.0.2",
+      "enzyme": "^3.6.0",
+      "enzyme-adapter-react-16": "^1.5.0",
+      "greenkeeper-lockfile": "^1.15.1",
+      "gzip-size": "^5.0.0",
+      "jest": "^23.4.2",
+      "jest-enzyme": "^7.0.2",
+      "pretty-bytes": "^5.1.0",
+      "react": "^16.4.2",
+      "react-dom": "^16.4.2",
+      "react-test-renderer": "^16.4.2",
+  <<<<<<< HEAD
+      "regenerator-runtime": "^0.13.2",
+      "rollup": "^0.63.5",
+      "rollup-plugin-babel": "^3.0.7",
+  =======
+      "regenerator-runtime": "^0.12.1",
+      "rollup": "^1.15.6",
+      "rollup-plugin-babel": "^4.3.1",
+  >>>>>>> master
+      "rollup-plugin-commonjs": "^9.1.4",
+      "rollup-plugin-json": "^3.0.0",
+      "rollup-plugin-node-resolve": "^3.3.0",
+      "rollup-plugin-uglify": "^6.0.1",
+      "rollup-watch": "^4.3.1"
+    },
+    "jest": {
+      "collectCoverage": true,
+      "collectCoverageFrom": [
+        "src/**/*.js",
+        "!src/**/*.test.js"
+      ],
+      "testURL": "http://localhost"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
