@@ -13,6 +13,7 @@ const config = {
     file: './index.js',
     format: 'umd',
     globals: {
+      'crypto': 'crypto',
       'react': 'React',
       'react-dom': 'ReactDOM',
     },
@@ -20,12 +21,15 @@ const config = {
     footer: '/* follow me on Twitter! @ryanhefner */',
   },
   external: [
+    'crypto',
     'react',
     'react-dom',
   ],
   plugins: [
     babel({
       exclude: 'node_modules/**',
+      externalHelpers: process.env.BABEL_ENV === 'umd',
+      runtimeHelpers: true,
     }),
     resolve(),
     commonjs({
