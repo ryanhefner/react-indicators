@@ -1429,10 +1429,10 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
-clean-react-props@^0.2.6:
-  version "0.2.14"
-  resolved "https://registry.yarnpkg.com/clean-react-props/-/clean-react-props-0.2.14.tgz#fd6f2ae58c708c69943f895ed7ae17edb9c0c2ef"
-  integrity sha512-WBio6ddC0aD7BozQgB6rHKvsqL6iFOCa/I8/wJWMS1GZD5XoN/nih8DjCUdVhP4Dmo4gQz7iZfFHN+Lf6sxodw==
+clean-react-props@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/clean-react-props/-/clean-react-props-0.3.0.tgz#b6ee3eab9596d78208d19c17a4e85d3540881cae"
+  integrity sha512-RcLEriuYxTkFrqmAE1hX00VprEzfubaJ1HDTE2U1eamUC/WADyKH7Ug3c+RNqpntEnAK1MSJbKogxAixllihKg==
 
 cliui@^4.0.0:
   version "4.1.0"
@@ -3804,6 +3804,11 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
+nanoid@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.0.3.tgz#dde999e173bc9d7bd2ee2746b89909ade98e075e"
+  integrity sha512-NbaoqdhIYmY6FXDRB4eYtDVC9Z9eCbn8TyaiC16LNKtpPv/aqa0tOPD8y6gNE4yUNnaZ7LLhYtXOev/6+cBtfw==
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -4435,13 +4440,14 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-canvas-wrapper@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/react-canvas-wrapper/-/react-canvas-wrapper-0.2.6.tgz#280ac0b7b13b431c25254d5146a5401e4c009ff6"
-  integrity sha512-A8KjfJMO9SZZQgP2DMgO4yxFaAlZ6n+8jL8RJHwuA4eL8ZtZggIvXU8MWZ6EHDbHAG9e16uq8TS+lgEjTrNVUw==
+react-canvas-wrapper@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-canvas-wrapper/-/react-canvas-wrapper-0.3.0.tgz#43975f1db3dc2c6bf374f4d927edb2077f8d10f1"
+  integrity sha512-WRJzoY4ohfvuWqR+ZQs5n/+6fYf50lLX+69t0tjxldwnSM3geroUMAJEHU2HuGarME3qPwwskYFTJPFs/XCV5w==
   dependencies:
-    clean-react-props "^0.2.6"
-    prop-types "^15.6.2"
+    clean-react-props "^0.3.0"
+    nanoid "^2.0.3"
+    prop-types "^15.7.2"
 
 react-dom@^16.4.2:
   version "16.8.6"
