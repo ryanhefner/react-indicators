@@ -45,7 +45,7 @@
     "react-dom": ">=15"
   },
   "dependencies": {
-    "lomit": "^0.1.1",
+    "lomit": "^0.2.0",
     "prop-types": "^15.6.2",
     "react-canvas-wrapper": "^0.4.1"
   },
