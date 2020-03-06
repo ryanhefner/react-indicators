@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
 [![Coverage Status](https://coveralls.io/repos/github/ryanhefner/react-indicators/badge.svg?branch=master)](https://coveralls.io/github/ryanhefner/react-indicators?branch=master)
 [![CircleCI](https://circleci.com/gh/ryanhefner/react-indicators.svg?style=shield)](https://circleci.com/gh/ryanhefner/react-indicators)
-[![Greenkeeper badge](https://badges.greenkeeper.io/ryanhefner/react-indicators.svg)](https://greenkeeper.io/)
+
 
 Simple, [responsive](#responsive-canvas), canvas-based indicators that
 you can use to communicate the progress of loaders, timers or whatever else you
