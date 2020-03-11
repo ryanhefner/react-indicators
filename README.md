@@ -1,9 +1,11 @@
 # react-indicators
 
-[![npm version](https://badge.fury.io/js/react-indicators.svg)](https://badge.fury.io/js/react-indicators)
-[![npm](https://img.shields.io/npm/l/express.svg)](LICENSE)
-[![Coverage Status](https://coveralls.io/repos/github/ryanhefner/react-indicators/badge.svg?branch=master)](https://coveralls.io/github/ryanhefner/react-indicators?branch=master)
-[![CircleCI](https://circleci.com/gh/ryanhefner/react-indicators.svg?style=shield)](https://circleci.com/gh/ryanhefner/react-indicators)
+![npm](https://img.shields.io/npm/v/react-indicators?style=flat-square)
+![NPM](https://img.shields.io/npm/l/react-indicators?style=flat-square)
+![npm](https://img.shields.io/npm/dt/react-indicators?style=flat-square)
+![Coveralls github](https://img.shields.io/coveralls/github/ryanhefner/react-indicators?style=flat-square)
+![CircleCI](https://img.shields.io/circleci/build/github/ryanhefner/react-indicators?style=flat-square)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/ryanhefner/react-indicators?style=flat-square)
 
 
 Simple, [responsive](#responsive-canvas), canvas-based indicators that
