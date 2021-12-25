@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "lomit": "^0.2.0",
-    "prop-types": "^15.6.2",
+    "prop-types": "^15.8.0",
     "react-canvas-wrapper": "^0.4.3"
   },
   "devDependencies": {
